@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function ImgCard(props){
+const ImgCard = props => {
   return (
     <div className="card">
       <div className="img-container">
