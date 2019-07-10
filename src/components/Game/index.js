@@ -9,7 +9,7 @@ class Game extends React.Component {
     super(props)
     this.state = {
       clickedImg: [],
-      friends: friends,
+      friends: this.shuffle(friends),
       score: 0,
       highscore: 2,
       textinput: ""
@@ -99,14 +99,16 @@ class Game extends React.Component {
     return (
       <div>
         {/* <input onChange={this.handleChange}></input> */}
-        <h1>Clicky Game</h1>
+        <h1>Dragon Ball Memory Challenge</h1>
         <Score score={this.state.score} highscore={this.state.highscore} />
         <Wrapper>
           {
             this.state.friends.map((friend, index) => {
               return (
+                <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2">
 
-                <ImgCard name={friend.name} image={friend.image} key={index} handleClick={this.handleClick} />
+                  <ImgCard name={friend.name} image={friend.image} key={index} handleClick={this.handleClick} />
+                </div>
               )
             })
           }
