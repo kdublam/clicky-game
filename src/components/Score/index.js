@@ -3,10 +3,13 @@ import "./style.css"
 
 const Score = props => {
   return (
-    <div className="scoreDiv">
-      <h3>You Score: {props.score}</h3>
-      <h3>High Score: {props.highscore}</h3>
-    </div>
+    <nav class="navbar fixed-top navbar-light">
+  <a class="navbar-brand" href="#"></a><h4>Your Score: {props.score}</h4>
+      <h4>High Score: {props.highscore}</h4>
+</nav>
+    // <div className="scoreDiv">
+      
+    // </div>
   )
 }
 

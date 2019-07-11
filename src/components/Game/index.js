@@ -3,6 +3,7 @@ import friends from "../../friends.json"
 import ImgCard from "../ImgCard"
 import Wrapper from "../Wrapper"
 import Score from "../Score"
+import Footer from "../Footer"
 import "./style.css"
 
 class Game extends React.Component {
@@ -12,7 +13,7 @@ class Game extends React.Component {
       clickedImg: [],
       friends: this.shuffle(friends),
       score: 0,
-      highscore: 2,
+      highscore: 5,
       textinput: ""
     }
     this.handleClick = this.handleClick.bind(this)
@@ -66,7 +67,11 @@ class Game extends React.Component {
         score: score,
         highscore: highscore
       })
-      alert("You already selected this character! New High Score!!!")
+      if (this.state.score === 16) {
+        alert("You've completed the memory challenge!")
+      } else {
+        alert("You already selected this character! New High Score!!!")
+      }
     }
     else if (clickedImg.includes(name) && score <= highscore) {
       let score = 0
@@ -77,7 +82,11 @@ class Game extends React.Component {
         clickedImg: clickedImg,
         score: score
       })
-      alert("You already selected this character! Try again....")
+      if (this.state.score === 16) {
+        alert("You've completed the memory challenge! See you can do it again!")
+      } else {
+        alert("You already selected this character! Try again....")
+      }
 
     }
 
@@ -102,12 +111,11 @@ class Game extends React.Component {
         {/* <input onChange={this.handleChange}></input> */}
         <img className="logo" src="http://img05.deviantart.net/cef3/i/2015/122/c/4/dragon_ball_z__dbz__nuevo_logo_by_saodvd-d8rx6aw.png"></img>
         <h2 className="gameName">Memory Challenge</h2>
-        <Score score={this.state.score} highscore={this.state.highscore} />
         <Wrapper>
           {
             this.state.friends.map((friend, index) => {
               return (
-                <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2">
+                <div className="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2">
 
                   <ImgCard name={friend.name} image={friend.image} key={index} handleClick={this.handleClick} />
                 </div>
@@ -115,7 +123,8 @@ class Game extends React.Component {
             })
           }
         </Wrapper>
-
+        <Score score={this.state.score} highscore={this.state.highscore} />
+        <Footer />
       </div>
     );
   }
