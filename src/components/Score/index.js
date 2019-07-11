@@ -1,10 +1,11 @@
 import React from "react";
+import "./style.css"
 
 const Score = props => {
   return (
-    <div>
-      <p>You Score: {props.score}</p>
-      <p>High Score: {props.highscore}</p>
+    <div className="scoreDiv">
+      <h3>You Score: {props.score}</h3>
+      <h3>High Score: {props.highscore}</h3>
     </div>
   )
 }

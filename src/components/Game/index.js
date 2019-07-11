@@ -3,6 +3,7 @@ import friends from "../../friends.json"
 import ImgCard from "../ImgCard"
 import Wrapper from "../Wrapper"
 import Score from "../Score"
+import "./style.css"
 
 class Game extends React.Component {
   constructor(props) {
@@ -99,7 +100,8 @@ class Game extends React.Component {
     return (
       <div>
         {/* <input onChange={this.handleChange}></input> */}
-        <h1>Dragon Ball Memory Challenge</h1>
+        <img className="logo" src="http://img05.deviantart.net/cef3/i/2015/122/c/4/dragon_ball_z__dbz__nuevo_logo_by_saodvd-d8rx6aw.png"></img>
+        <h2 className="gameName">Memory Challenge</h2>
         <Score score={this.state.score} highscore={this.state.highscore} />
         <Wrapper>
           {

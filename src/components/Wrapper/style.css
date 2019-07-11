@@ -9,3 +9,8 @@
   align-content: flex-start;
   overflow: auto;
 } */
+
+.gameGrid{
+  position: relative;
+  bottom:80px
+}
