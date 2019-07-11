@@ -80,7 +80,7 @@ class Game extends React.Component {
         score: score
       })
       if (this.state.score === 16) {
-        alert("You've completed the memory challenge! See you can do it again!")
+        alert("You've completed the memory challenge! See if you can do it again!")
       } else {
         alert("You already selected this character! Try again....")
       }
@@ -93,7 +93,8 @@ class Game extends React.Component {
     return (
       <div>
         <img className="logo" src="http://img05.deviantart.net/cef3/i/2015/122/c/4/dragon_ball_z__dbz__nuevo_logo_by_saodvd-d8rx6aw.png"></img>
-        <h2 className="gameName">Memory Challenge</h2>
+        <p className="gameName">Memory Challenge</p>
+        <p className="gameName">Click/tap on a character to start. You cannot select on the same character twice. Good luck!</p>
         <Wrapper>
           {
             this.state.friends.map((friend, index) => {
