@@ -2,7 +2,7 @@
 
 
 ### Overview
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). User will be given different characters on the screen. The objective is the user has to select all the available character without repeating. There is a high score that the player can try to beat.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). User will be given different characters on the screen. The objective is the user has to select all the available characters without repeating. There is a high score that the player can try to beat.
 
 You can check out the here
 [Live Demo](https://kdublam.github.io/clicky-game/)!
