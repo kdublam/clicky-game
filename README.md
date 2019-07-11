@@ -8,6 +8,8 @@ You can check out the here
 [Live Demo](https://kdublam.github.io/clicky-game/)!
 
 ### Screenshots
+
+#### Desktop page
 <img src="./src/images/screenshot.png" width="400"/>
 
 #### Mobile page
