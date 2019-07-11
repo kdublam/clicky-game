@@ -17,8 +17,6 @@ class Game extends React.Component {
       textinput: ""
     }
     this.handleClick = this.handleClick.bind(this)
-    // this.handleChange = this.handleChange.bind(this)
-
   }
 
   shuffle(array) {
@@ -48,7 +46,6 @@ class Game extends React.Component {
       let score = this.state.score
       clickedImg.push(name)
       score++
-      console.log(score)
       let newArray = this.shuffle(this.state.friends)
       this.setState({
         friends: newArray,
@@ -89,26 +86,12 @@ class Game extends React.Component {
       }
 
     }
-
-    console.log(clickedImg)
-
   }
 
-  // handleChange(event){
-  //   this.setState({
-  //     textinput: event.target.value
-  //   },()=>{
-  //     console.log(this.state)
-
-  //   })
-
-  //   // console.log(this.state)
-  // }
 
   render() {
     return (
       <div>
-        {/* <input onChange={this.handleChange}></input> */}
         <img className="logo" src="http://img05.deviantart.net/cef3/i/2015/122/c/4/dragon_ball_z__dbz__nuevo_logo_by_saodvd-d8rx6aw.png"></img>
         <h2 className="gameName">Memory Challenge</h2>
         <Wrapper>
